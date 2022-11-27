@@ -8,11 +8,15 @@ website:
       - href: index.qmd
         text: Home
       - morphology.qmd
+    right:
+      - icon: github
+        href: https://github.com/seldenlab/exogamy.1
+        aria-label: GitHub
 
 format:
   html:
     theme: lux
-    css: custom.css
+    css: styles.css
     toc: true
 
 editor: source
