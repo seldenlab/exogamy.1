@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Robert Z. Selden, Jr.">
-<meta name="dcterms.date" content="2022-11-27">
 
-<title>exogamy.1</title>
+<title>exogamy.1 - Morphology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -88,58 +86,113 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </style>
 
 
-<script src="exogamy.1_files/libs/clipboard/clipboard.min.js"></script>
-<script src="exogamy.1_files/libs/quarto-html/quarto.js"></script>
-<script src="exogamy.1_files/libs/quarto-html/popper.min.js"></script>
-<script src="exogamy.1_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="exogamy.1_files/libs/quarto-html/anchor.min.js"></script>
-<link href="exogamy.1_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="exogamy.1_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="exogamy.1_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="exogamy.1_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="exogamy.1_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
 
 
+<link rel="stylesheet" href="custom.css">
 </head>
 
-<body class="fullcontent">
+<body class="nav-fixed">
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">exogamy.1</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./morphology.html" aria-current="page">Morphology</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#load-packages-data" id="toc-load-packages-data" class="nav-link active" data-scroll-target="#load-packages-data">Load packages + data</a></li>
+  <li><a href="#generate-outlines" id="toc-generate-outlines" class="nav-link" data-scroll-target="#generate-outlines">Generate outlines</a></li>
+  <li><a href="#calibrate-harmonic-efa" id="toc-calibrate-harmonic-efa" class="nav-link" data-scroll-target="#calibrate-harmonic-efa">Calibrate harmonic + EFA</a></li>
+  <li><a href="#pca" id="toc-pca" class="nav-link" data-scroll-target="#pca">PCA</a></li>
+  <li><a href="#manova" id="toc-manova" class="nav-link" data-scroll-target="#manova">MANOVA</a></li>
+  <li><a href="#mean-shapes" id="toc-mean-shapes" class="nav-link" data-scroll-target="#mean-shapes">Mean shapes</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">exogamy.1</h1>
+<h1 class="title">Morphology</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Robert Z. Selden, Jr. </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">November 27, 2022</p>
-    </div>
-  </div>
     
   </div>
   
 
 </header>
 
-<section id="stemmed-arrow-points" class="level2">
-<h2 class="anchored" data-anchor-id="stemmed-arrow-points">Stemmed arrow points</h2>
-<section id="load-packages-data" class="level3">
-<h3 class="anchored" data-anchor-id="load-packages-data">Load packages + data</h3>
+<section id="load-packages-data" class="level2">
+<h2 class="anchored" data-anchor-id="load-packages-data">Load packages + data</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load packages</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"MomX/Momocs"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -149,7 +202,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>here() starts at D:/github/exogamy.1</code></pre>
+<pre><code>here() starts at D:/github/exogamy.1/supp</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Momocs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -175,8 +228,8 @@ Attaching package: 'Momocs'</code></pre>
 <span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>att.data<span class="sc">$</span>site <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(att.data<span class="sc">$</span>site)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="generate-outlines" class="level3">
-<h3 class="anchored" data-anchor-id="generate-outlines">Generate outlines</h3>
+<section id="generate-outlines" class="level2">
+<h2 class="anchored" data-anchor-id="generate-outlines">Generate outlines</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># generate outlines</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>outlines <span class="ot">&lt;-</span> jpg.list <span class="sc">%&gt;%</span></span>
@@ -241,7 +294,7 @@ Attaching package: 'Momocs'</code></pre>
 [ 54 / 54 ]  F7.3.Z.jpg</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Done in 13.8 secs</code></pre>
+<pre><code>Done in 13.9 secs</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add attributes</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>data.out <span class="ot">&lt;-</span> <span class="fu">Out</span>(outlines, </span>
@@ -254,8 +307,8 @@ Attaching package: 'Momocs'</code></pre>
 <span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coo_center</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="calibrate-harmonic-efa" class="level3">
-<h3 class="anchored" data-anchor-id="calibrate-harmonic-efa">Calibrate harmonic + EFA</h3>
+<section id="calibrate-harmonic-efa" class="level2">
+<h2 class="anchored" data-anchor-id="calibrate-harmonic-efa">Calibrate harmonic + EFA</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># calibrate how many harmonics needed</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">calibrate_harmonicpower_efourier</span>(norm.outlines, </span>
@@ -264,7 +317,7 @@ Attaching package: 'Momocs'</code></pre>
 <pre><code>$gg</code></pre>
 </div>
 <div class="cell-output-display">
-<p><img src="exogamy.1_files/figure-html/cal.harm-1.png" class="img-fluid" style="width:100.0%"></p>
+<p><img src="morphology_files/figure-html/cal.harm-1.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -503,8 +556,8 @@ $minh
 <span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>pca.outlines <span class="ot">&lt;-</span> <span class="fu">PCA</span>(efa.outlines)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="pca" class="level3">
-<h3 class="anchored" data-anchor-id="pca">PCA</h3>
+<section id="pca" class="level2">
+<h2 class="anchored" data-anchor-id="pca">PCA</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot pca by trinomial</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_PCA</span>(pca.outlines, </span>
@@ -519,7 +572,7 @@ $minh
 <span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">eigen =</span> <span class="cn">TRUE</span>,</span>
 <span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">zoom =</span> <span class="fl">0.85</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="exogamy.1_files/figure-html/pca.plot-1.png" class="img-fluid" style="width:100.0%"></p>
+<p><img src="morphology_files/figure-html/pca.plot-1.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot pca by burial</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_PCA</span>(pca.outlines, </span>
@@ -534,17 +587,17 @@ $minh
 <span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">eigen =</span> <span class="cn">TRUE</span>,</span>
 <span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">zoom =</span> <span class="fl">0.85</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="exogamy.1_files/figure-html/pca.plot-2.png" class="img-fluid" style="width:100.0%"></p>
+<p><img src="morphology_files/figure-html/pca.plot-2.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mean shape + 2sd for the first 5 pcs</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">PCcontrib</span>(pca.outlines, <span class="at">nax =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="exogamy.1_files/figure-html/pca.plot-3.png" class="img-fluid" style="width:100.0%"></p>
+<p><img src="morphology_files/figure-html/pca.plot-3.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
 </section>
-<section id="manova" class="level3">
-<h3 class="anchored" data-anchor-id="manova">MANOVA</h3>
+<section id="manova" class="level2">
+<h2 class="anchored" data-anchor-id="manova">MANOVA</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># shape difference between sites?</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">MANOVA</span>(pca.outlines, <span class="st">'site'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -652,20 +705,20 @@ F2.2073 - F8.1091  1 0.4674    9.360      3     32 1.368e-04</code></pre>
 </div>
 </div>
 </section>
-<section id="mean-shapes" class="level3">
-<h3 class="anchored" data-anchor-id="mean-shapes">Mean shapes</h3>
+<section id="mean-shapes" class="level2">
+<h2 class="anchored" data-anchor-id="mean-shapes">Mean shapes</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mean shapes by site</span></span>
 <span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>ms<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="fu">MSHAPES</span>(efa.outlines, <span class="sc">~</span>site)</span>
 <span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_MSHAPES</span>(ms<span class="fl">.1</span>, <span class="at">size =</span> <span class="fl">0.75</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="exogamy.1_files/figure-html/ms1-1.png" class="img-fluid" style="width:100.0%"></p>
+<p><img src="morphology_files/figure-html/ms1-1.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mean shapes by burial</span></span>
 <span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>ms<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="fu">MSHAPES</span>(efa.outlines, <span class="sc">~</span>burial)</span>
 <span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_MSHAPES</span>(ms<span class="fl">.1</span>, <span class="at">size =</span> <span class="fl">0.75</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="exogamy.1_files/figure-html/ms1-2.png" class="img-fluid" style="width:100.0%"></p>
+<p><img src="morphology_files/figure-html/ms1-2.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="do">## characterise shape diffs by significant results</span></span>
 <span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="co"># mean shapes for 41cp5/41hs15</span></span>
@@ -683,7 +736,7 @@ F2.2073 - F8.1091  1 0.4674    9.360      3     32 1.368e-04</code></pre>
 <span id="cb48-14"><a href="#cb48-14" aria-hidden="true" tabindex="-1"></a>B36 <span class="ot">&lt;-</span> ms<span class="fl">.3</span><span class="sc">$</span>B36</span>
 <span id="cb48-15"><a href="#cb48-15" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="exogamy.1_files/figure-html/ms1-3.png" class="img-fluid" style="width:100.0%"></p>
+<p><img src="morphology_files/figure-html/ms1-3.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tps_iso</span>(B19, B36, <span class="at">iso.nb =</span> <span class="dv">1000</span>, <span class="at">grid =</span> <span class="cn">TRUE</span>, <span class="at">legend =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tps_arr</span>(B19, B36, <span class="at">arr.nb =</span> <span class="dv">200</span>, <span class="at">grid =</span> <span class="cn">TRUE</span>, <span class="at">legend =</span> <span class="cn">FALSE</span>)</span>
@@ -694,7 +747,7 @@ F2.2073 - F8.1091  1 0.4674    9.360      3     32 1.368e-04</code></pre>
 <span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a>F2<span class="fl">.2073</span> <span class="ot">&lt;-</span> ms<span class="fl">.3</span><span class="sc">$</span>F2<span class="fl">.2073</span></span>
 <span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="exogamy.1_files/figure-html/ms1-4.png" class="img-fluid" style="width:100.0%"></p>
+<p><img src="morphology_files/figure-html/ms1-4.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tps_iso</span>(F2<span class="fl">.2073</span>, F2<span class="fl">.2072</span>, <span class="at">iso.nb =</span> <span class="dv">1000</span>, <span class="at">grid =</span> <span class="cn">TRUE</span>, <span class="at">legend =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tps_arr</span>(F2<span class="fl">.2073</span>, F2<span class="fl">.2072</span>, <span class="at">arr.nb =</span> <span class="dv">200</span>, <span class="at">grid =</span> <span class="cn">TRUE</span>, <span class="at">legend =</span> <span class="cn">FALSE</span>)</span>
@@ -704,20 +757,20 @@ F2.2073 - F8.1091  1 0.4674    9.360      3     32 1.368e-04</code></pre>
 <span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>F8<span class="fl">.1091</span> <span class="ot">&lt;-</span> ms<span class="fl">.3</span><span class="sc">$</span>F8<span class="fl">.1091</span></span>
 <span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="exogamy.1_files/figure-html/ms1-5.png" class="img-fluid" style="width:100.0%"></p>
+<p><img src="morphology_files/figure-html/ms1-5.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tps_iso</span>(F2<span class="fl">.2073</span>, F8<span class="fl">.1091</span>, <span class="at">iso.nb =</span> <span class="dv">1000</span>, <span class="at">grid =</span> <span class="cn">TRUE</span>, <span class="at">legend =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tps_arr</span>(F2<span class="fl">.2073</span>, F8<span class="fl">.1091</span>, <span class="at">arr.nb =</span> <span class="dv">200</span>, <span class="at">grid =</span> <span class="cn">TRUE</span>, <span class="at">legend =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tps_grid</span>(F2<span class="fl">.2073</span>, F8<span class="fl">.1091</span>, <span class="at">grid.size =</span> <span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="exogamy.1_files/figure-html/ms1-6.png" class="img-fluid" style="width:100.0%"></p>
+<p><img src="morphology_files/figure-html/ms1-6.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
-</section>
+
+
 </section>
 
-</main>
-<!-- /main column -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -1,13 +1,8 @@
 ---
-title: "exogamy.1"
-author: "Robert Z. Selden, Jr."
-date: "`r format(Sys.time(), '%d %B, %Y')`"
-format: html
+title: "Morphology"
 ---
 
-## Stemmed arrow points
-
-### Load packages + data
+## Load packages + data
 
 ```{r load.packages, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE}
 # load packages
@@ -29,7 +24,7 @@ att.data$burial <- as.factor(att.data$burial)
 att.data$site <- as.factor(att.data$site)
 ```
 
-### Generate outlines
+## Generate outlines
 
 ```{r outlines + attributes, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE}
 # generate outlines
@@ -47,7 +42,7 @@ norm.outlines <- data.out %>%
   coo_center()
 ```
 
-### Calibrate harmonic + EFA
+## Calibrate harmonic + EFA
 
 ```{r cal.harm, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE}
 # calibrate how many harmonics needed
@@ -63,7 +58,7 @@ efa.outlines <- efourier(norm.outlines,
 pca.outlines <- PCA(efa.outlines)
 ```
 
-### PCA
+## PCA
 
 ```{r pca.plot, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE}
 # plot pca by trinomial
@@ -96,7 +91,7 @@ plot_PCA(pca.outlines,
 PCcontrib(pca.outlines, nax = 1:5)
 ```
 
-### MANOVA
+## MANOVA
 
 ```{r manova, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE}
 # shape difference between sites?
@@ -109,7 +104,7 @@ MANOVA(pca.outlines, 'burial')
 MANOVA_PW(pca.outlines, 'burial')
 ```
 
-### Mean shapes
+## Mean shapes
 
 ```{r ms1, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE}
 # mean shapes by site

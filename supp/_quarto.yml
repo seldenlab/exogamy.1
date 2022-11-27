@@ -1,0 +1,19 @@
+project:
+  type: website
+
+website:
+  title: "exogamy.1"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - morphology.qmd
+
+format:
+  html:
+    theme: lux
+    css: custom.css
+    toc: true
+
+editor: source
+
