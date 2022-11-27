@@ -2,7 +2,7 @@
 title: "exogamy.1"
 author: "Robert Z. Selden, Jr."
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-format: gfm
+format: html
 ---
 
 ## Stemmed arrow points
