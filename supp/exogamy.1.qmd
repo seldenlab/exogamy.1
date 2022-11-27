@@ -1,0 +1,157 @@
+---
+title: "exogamy.1"
+author: "Robert Z. Selden, Jr."
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+format: html
+editor: visual
+---
+
+## Stemmed arrow points
+
+### Load packages + data
+
+```{r load.packages, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE}
+# load packages
+devtools::install_github("MomX/Momocs")
+library(here)
+library(Momocs)
+
+# read images
+jpg.list <- list.files("stemmed", 
+                       full.names = TRUE)
+
+# read attribute data
+att.data <- read.csv("stemmed.csv", 
+                     header = TRUE, 
+                     as.is = TRUE)
+
+# attribute to factor
+att.data$burial <- as.factor(att.data$burial)
+att.data$site <- as.factor(att.data$site)
+```
+
+### Generate outlines
+
+```{r outlines + attributes, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE}
+# generate outlines
+outlines <- jpg.list %>%
+  import_jpg()
+
+# add attributes
+data.out <- Out(outlines, 
+         fac = att.data)
+
+# scale, align, rotate, and center specimens
+norm.outlines <- data.out %>% 
+  coo_scale() %>%
+  coo_align() %>% 
+  coo_center()
+```
+
+### Calibrate harmonic + EFA
+
+```{r cal.harm, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE}
+# calibrate how many harmonics needed
+calibrate_harmonicpower_efourier(norm.outlines, 
+                                 nb.h = 30)
+
+# generate efa outlines
+efa.outlines <- efourier(norm.outlines, 
+                         nb.h = 23,
+                         norm = TRUE)
+
+# use efa.outlines for pca
+pca.outlines <- PCA(efa.outlines)
+```
+
+### PCA
+
+```{r pca.plot, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE}
+# plot pca by trinomial
+plot_PCA(pca.outlines, 
+         morphospace_position = "xy",
+         palette = pal_qual_solarized,
+         chullfilled = TRUE,
+         ~site,
+         labelgroups = TRUE,
+         legend = FALSE,
+         axesnames = TRUE,
+         morphospace = TRUE,
+         eigen = TRUE,
+         zoom = 0.85)
+
+# plot pca by burial
+plot_PCA(pca.outlines, 
+         morphospace_position = "xy",
+         palette = pal_qual_solarized,
+         chullfilled = TRUE,
+         ~burial,
+         labelgroups = TRUE,
+         legend = FALSE,
+         axesnames = TRUE,
+         morphospace = TRUE,
+         eigen = TRUE,
+         zoom = 0.85)
+
+# mean shape + 2sd for the first 5 pcs
+PCcontrib(pca.outlines, nax = 1:5)
+```
+
+### MANOVA
+
+```{r manova, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE}
+# shape difference between sites?
+MANOVA(pca.outlines, 'site')
+
+# shape difference between burials?
+MANOVA(pca.outlines, 'burial')
+
+# which differ?
+MANOVA_PW(pca.outlines, 'burial')
+```
+
+### Mean shapes
+
+```{r ms1, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE}
+# mean shapes by site
+ms.1 <- MSHAPES(efa.outlines, ~site)
+plot_MSHAPES(ms.1, size = 0.75)
+
+# mean shapes by burial
+ms.1 <- MSHAPES(efa.outlines, ~burial)
+plot_MSHAPES(ms.1, size = 0.75)
+
+## characterise shape diffs by significant results
+# mean shapes for 41cp5/41hs15
+ms.2 <- MSHAPES(efa.outlines, ~site, nb.pts = 100)$shp
+Carpenter <- ms.2$Carpenter
+PTM <- ms.2$PTM
+par(mfrow=c(2,2))
+tps_iso(Carpenter, PTM, iso.nb = 1000, grid = TRUE, legend = FALSE)
+tps_arr(Carpenter, PTM, arr.nb = 200, grid = TRUE, legend = FALSE)
+tps_grid(Carpenter, PTM, grid.size = 50)
+
+# mean shapes for B19/B24
+ms.3 <- MSHAPES(efa.outlines, ~burial, nb.pts = 100)$shp
+B19 <- ms.3$B19
+B24 <- ms.3$B24
+par(mfrow=c(2,2))
+tps_iso(B19, B24, iso.nb = 1000, grid = TRUE, legend = FALSE)
+tps_arr(B19, B24, arr.nb = 200, grid = TRUE, legend = FALSE)
+tps_grid(B19, B24, grid.size = 50)
+
+# mean shapes for F2.2072/F2.2073
+F2.2072 <- ms.3$F2.2072
+F2.2073 <- ms.3$F2.2073
+par(mfrow=c(2,2))
+tps_iso(F2.2073, F2.2072, iso.nb = 1000, grid = TRUE, legend = FALSE)
+tps_arr(F2.2073, F2.2072, arr.nb = 200, grid = TRUE, legend = FALSE)
+tps_grid(F2.2073, F2.2072, grid.size = 50)
+
+# mean shapes for F2.2073/F8.1091
+F8.1091 <- ms.3$F8.1091
+par(mfrow=c(2,2))
+tps_iso(F2.2073, F8.1091, iso.nb = 1000, grid = TRUE, legend = FALSE)
+tps_arr(F2.2073, F8.1091, arr.nb = 200, grid = TRUE, legend = FALSE)
+tps_grid(F2.2073, F8.1091, grid.size = 50)
+```
