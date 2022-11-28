@@ -72,7 +72,8 @@ plot_PCA(pca.outlines,
          axesnames = TRUE,
          morphospace = TRUE,
          eigen = TRUE,
-         zoom = 0.85)
+         box = FALSE,
+         zoom = 0.8)
 
 # plot pca by burial
 plot_PCA(pca.outlines, 
@@ -85,7 +86,8 @@ plot_PCA(pca.outlines,
          axesnames = TRUE,
          morphospace = TRUE,
          eigen = TRUE,
-         zoom = 0.85)
+         box = FALSE,
+         zoom = 0.8)
 
 # mean shape + 2sd for the first 5 pcs
 PCcontrib(pca.outlines, nax = 1:5)
