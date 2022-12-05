@@ -1,0 +1,101 @@
+---
+title: "Morphology by Site"
+---
+
+## Load packages + data
+
+```{r load.packages, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE}
+# load packages
+devtools::install_github("MomX/Momocs")
+library(here)
+library(Momocs)
+
+# read images
+jpg.list <- list.files("stemmed.burial", 
+                       full.names = TRUE)
+
+# read attribute data
+att.data <- read.csv("stemmed.csv", 
+                     header = TRUE, 
+                     as.is = TRUE)
+
+# attribute to factor
+att.data$burial <- as.factor(att.data$burial)
+att.data$site <- as.factor(att.data$site)
+```
+
+## Generate outlines
+
+```{r outlines + attributes, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE}
+# generate outlines
+outlines <- jpg.list %>%
+  import_jpg()
+
+# add attributes
+data.out <- Out(outlines, 
+         fac = att.data)
+
+# scale, align, rotate, and center specimens
+norm.outlines <- data.out %>% 
+  coo_scale() %>%
+  coo_align() %>% 
+  coo_center()
+```
+
+## Calibrate harmonic + EFA
+
+```{r cal.harm, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE}
+# calibrate how many harmonics needed
+calibrate_harmonicpower_efourier(norm.outlines, 
+                                 nb.h = 30)
+
+# generate efa outlines
+efa.outlines <- efourier(norm.outlines, 
+                         nb.h = 23,
+                         norm = TRUE)
+
+# use efa.outlines for pca
+pca.outlines <- PCA(efa.outlines)
+```
+
+## PCA
+
+```{r pca.plot, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE}
+# plot pca by trinomial
+plot_PCA(pca.outlines, 
+         morphospace_position = "xy",
+         palette = pal_qual_solarized,
+         chullfilled = TRUE,
+         ~site,
+         labelgroups = TRUE,
+         legend = FALSE,
+         axesnames = TRUE,
+         morphospace = TRUE,
+         eigen = TRUE,
+         box = FALSE,
+         zoom = 0.7)
+
+# mean shape + 2sd for the first 2 pcs
+PCcontrib(pca.outlines, nax = 1:2)
+```
+
+## MANOVA
+
+```{r manova, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE}
+# shape difference between sites?
+MANOVA(pca.outlines, 'site')
+```
+
+## Mean shapes
+
+```{r ms1, out.width = "100%", dpi = 300, echo=TRUE, warning=FALSE}
+## characterise shape diffs by significant results
+# mean shapes for 41cp5/41hs15
+ms.1 <- MSHAPES(efa.outlines, ~site, nb.pts = 100)$shp
+Carpenter <- ms.1$Carpenter
+PTM <- ms.1$PTM
+par(mfrow=c(2,2))
+tps_iso(Carpenter, PTM, iso.nb = 1000, grid = TRUE, legend = FALSE)
+tps_arr(Carpenter, PTM, arr.nb = 200, grid = TRUE, legend = FALSE)
+tps_grid(Carpenter, PTM, grid.size = 50)
+```
