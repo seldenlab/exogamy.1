@@ -24,17 +24,17 @@ Support for the null hypothesis is expected in instances where arrow points from
 
 ## Primary findings
 
-```{r figsite, out.width = "100%", dpi = 300, echo=FALSE, warning=FALSE, fig.cap="Composite image illustrating the plot of first two principal components by site, and the XY transformations for the first two principal components, comprising 75.9 percent of cumulative shape variation."}
+```{r figsite, out.width = "100%", dpi = 300, echo=FALSE, warning=FALSE, fig.cap="Composite image illustrating the plot of first two principal components by site, and XY transformations for the first two principal components, comprising 75.9 percent of cumulative shape variation."}
 knitr::include_graphics('img/fig.site.jpg')
 ```
 
-```{r figburial, out.width = "100%", dpi = 300, echo=FALSE, warning=FALSE, fig.cap="Composite image illustrating the plot of first two principal components by burial, and the XY transformations for the first two principal components, comprising 75.9 percent of cumulative shape variation."}
+```{r figburial, out.width = "100%", dpi = 300, echo=FALSE, warning=FALSE, fig.cap="Composite image illustrating the plot of first two principal components by burial, and XY transformations for the first two principal components, comprising 75.9 percent of cumulative shape variation."}
 knitr::include_graphics('img/fig.burial.jpg')
 ```
 
 ## Discussion
 
-```{r mshape, out.width = "100%", dpi = 300, echo=FALSE, warning=FALSE, fig.cap="Mean shapes, warp grids, vector fields, and isolines using Thin Plate Splines for significant differences found in this study, which include those between Tuck Carpenter (blue) and Pine Tree Mound (purple), left; burials F2.2072 (purple) and F2.2073 (blue), center; and burials F2.2073 (blue) and F8.1091 (purple), right."}
+```{r mshape, out.width = "100%", dpi = 300, echo=FALSE, warning=FALSE, fig.cap="Mean shapes, warp grids, vector fields, and isolines using Thin Plate Splines for the three significant differences found in this study, which include those between Tuck Carpenter (blue) and Pine Tree Mound (purple), left; burials F2.2072 (purple) and F2.2073 (blue), center; and burials F2.2073 (blue) and F8.1091 (purple), right."}
 knitr::include_graphics('img/fig.mshape.jpg')
 ```
 
