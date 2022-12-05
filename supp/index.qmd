@@ -34,7 +34,7 @@ knitr::include_graphics('img/fig.burial.jpg')
 
 ## Discussion
 
-```{r mshape, out.width = "100%", dpi = 300, echo=FALSE, warning=FALSE, fig.cap="Mean shapes and warp grids for significant differences found in this study, to include those between Tuck Carpenter (blue) and Pine Tree Mound (purple), left; F2.2072 (purple) and F2.2073 (blue), center; and F2.2073 (blue) and F8.1091 (purple), right."}
+```{r mshape, out.width = "100%", dpi = 300, echo=FALSE, warning=FALSE, fig.cap="Mean shapes, warp grids, vector fields, and isolines using Thin Plate Splines for significant differences found in this study, which include those between Tuck Carpenter (blue) and Pine Tree Mound (purple), left; burials F2.2072 (purple) and F2.2073 (blue), center; and burials F2.2073 (blue) and F8.1091 (purple), right."}
 knitr::include_graphics('img/fig.mshape.jpg')
 ```
 
