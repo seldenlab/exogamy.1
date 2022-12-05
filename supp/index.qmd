@@ -24,12 +24,18 @@ Support for the null hypothesis is expected in instances where arrow points from
 
 ## Primary findings
 
-```{r figsite, out.width = "80%", dpi = 300, echo=FALSE, warning=FALSE, fig.cap="Composite image illustrating a, plot of first two principal components and b, XY transformations for the first two principal components, comprising 75.9 percent of cumulative shape variation; then c, comparison of mean shapes illustrating the significant difference in stemmed projectile point shape that occurs for male burials at Tuck Carpenter and Pine Tree Mound."}
+```{r figsite, out.width = "100%", dpi = 300, echo=FALSE, warning=FALSE, fig.cap="Composite image illustrating the plot of first two principal components by site, and the XY transformations for the first two principal components, comprising 75.9 percent of cumulative shape variation."}
 knitr::include_graphics('img/fig.site.jpg')
 ```
 
-```{r figburial, out.width = "80%", dpi = 300, echo=FALSE, warning=FALSE, fig.cap="Composite image illustrating a, plot of first two principal components and b, XY transformations for the first two principal components, comprising 75.9 percent of cumulative shape variation; then comparisons of mean shape illustrating the significant difference in stemmed projectile point shapes that occur between burials c, 2.2072 and 2.2073; and d, 2.2073 and 8.1091 at Pine Tree Mound."}
+```{r figburial, out.width = "100%", dpi = 300, echo=FALSE, warning=FALSE, fig.cap="Composite image illustrating the plot of first two principal components by burial, and the XY transformations for the first two principal components, comprising 75.9 percent of cumulative shape variation."}
 knitr::include_graphics('img/fig.burial.jpg')
+```
+
+## Discussion
+
+```{r mshape, out.width = "100%", dpi = 300, echo=FALSE, warning=FALSE, fig.cap="Mean shapes and warp grids for significant differences found in this study, to include those between Tuck Carpenter (blue) and Pine Tree Mound (purple), left; F2.2072 (purple) and F2.2073 (blue), center; and F2.2073 (blue) and F8.1091 (purple), right."}
+knitr::include_graphics('img/fig.mshape.jpg')
 ```
 
 ## Acknowledgments

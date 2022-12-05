@@ -303,7 +303,7 @@ Attaching package: 'Momocs'</code></pre>
 [ 57 / 57 ]  F7.3.Z.jpg</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Done in 13.4 secs</code></pre>
+<pre><code>Done in 15.6 secs</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add attributes</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>data.out <span class="ot">&lt;-</span> <span class="fu">Out</span>(outlines, </span>
@@ -708,22 +708,31 @@ F2.2073 - F8.1091  1 0.6417  13.8821      4     31 1.347e-06</code></pre>
 <span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>ms<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="fu">MSHAPES</span>(efa.outlines, <span class="sc">~</span>burial, <span class="at">nb.pts =</span> <span class="dv">100</span>)<span class="sc">$</span>shp</span>
 <span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>F2<span class="fl">.2072</span> <span class="ot">&lt;-</span> ms<span class="fl">.1</span><span class="sc">$</span>F2<span class="fl">.2072</span></span>
 <span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>F2<span class="fl">.2073</span> <span class="ot">&lt;-</span> ms<span class="fl">.1</span><span class="sc">$</span>F2<span class="fl">.2073</span></span>
-<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</span>
-<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a><span class="fu">tps_iso</span>(F2<span class="fl">.2073</span>, F2<span class="fl">.2072</span>, <span class="at">iso.nb =</span> <span class="dv">1000</span>, <span class="at">grid =</span> <span class="cn">TRUE</span>, <span class="at">legend =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a><span class="fu">tps_arr</span>(F2<span class="fl">.2073</span>, F2<span class="fl">.2072</span>, <span class="at">arr.nb =</span> <span class="dv">200</span>, <span class="at">grid =</span> <span class="cn">TRUE</span>, <span class="at">legend =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a><span class="fu">tps_grid</span>(F2<span class="fl">.2073</span>, F2<span class="fl">.2072</span>, <span class="at">grid.size =</span> <span class="dv">50</span>)</span>
-<span id="cb40-10"><a href="#cb40-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-11"><a href="#cb40-11" aria-hidden="true" tabindex="-1"></a><span class="co"># mean shapes for F2.2073/F8.1091</span></span>
-<span id="cb40-12"><a href="#cb40-12" aria-hidden="true" tabindex="-1"></a>F8<span class="fl">.1091</span> <span class="ot">&lt;-</span> ms<span class="fl">.1</span><span class="sc">$</span>F8<span class="fl">.1091</span></span>
-<span id="cb40-13"><a href="#cb40-13" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a><span class="fu">tps_iso</span>(F2<span class="fl">.2073</span>, F2<span class="fl">.2072</span>, <span class="at">iso.nb =</span> <span class="dv">1000</span>, <span class="at">grid =</span> <span class="cn">TRUE</span>, <span class="at">legend =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="morphology.burial_files/figure-html/ms1-1.png" class="img-fluid" style="width:100.0%"></p>
 </div>
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tps_iso</span>(F2<span class="fl">.2073</span>, F8<span class="fl">.1091</span>, <span class="at">iso.nb =</span> <span class="dv">1000</span>, <span class="at">grid =</span> <span class="cn">TRUE</span>, <span class="at">legend =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tps_arr</span>(F2<span class="fl">.2073</span>, F8<span class="fl">.1091</span>, <span class="at">arr.nb =</span> <span class="dv">200</span>, <span class="at">grid =</span> <span class="cn">TRUE</span>, <span class="at">legend =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tps_grid</span>(F2<span class="fl">.2073</span>, F8<span class="fl">.1091</span>, <span class="at">grid.size =</span> <span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tps_arr</span>(F2<span class="fl">.2073</span>, F2<span class="fl">.2072</span>, <span class="at">arr.nb =</span> <span class="dv">200</span>, <span class="at">grid =</span> <span class="cn">TRUE</span>, <span class="at">legend =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="morphology.burial_files/figure-html/ms1-2.png" class="img-fluid" style="width:100.0%"></p>
+</div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tps_grid</span>(F2<span class="fl">.2073</span>, F2<span class="fl">.2072</span>, <span class="at">grid.size =</span> <span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="morphology.burial_files/figure-html/ms1-3.png" class="img-fluid" style="width:100.0%"></p>
+</div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mean shapes for F2.2073/F8.1091</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>F8<span class="fl">.1091</span> <span class="ot">&lt;-</span> ms<span class="fl">.1</span><span class="sc">$</span>F8<span class="fl">.1091</span></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tps_iso</span>(F2<span class="fl">.2073</span>, F8<span class="fl">.1091</span>, <span class="at">iso.nb =</span> <span class="dv">1000</span>, <span class="at">grid =</span> <span class="cn">TRUE</span>, <span class="at">legend =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="morphology.burial_files/figure-html/ms1-4.png" class="img-fluid" style="width:100.0%"></p>
+</div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tps_arr</span>(F2<span class="fl">.2073</span>, F8<span class="fl">.1091</span>, <span class="at">arr.nb =</span> <span class="dv">200</span>, <span class="at">grid =</span> <span class="cn">TRUE</span>, <span class="at">legend =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="morphology.burial_files/figure-html/ms1-5.png" class="img-fluid" style="width:100.0%"></p>
+</div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tps_grid</span>(F2<span class="fl">.2073</span>, F8<span class="fl">.1091</span>, <span class="at">grid.size =</span> <span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="morphology.burial_files/figure-html/ms1-6.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
 

@@ -307,7 +307,7 @@ Attaching package: 'Momocs'</code></pre>
 [ 57 / 57 ]  F7.3.Z.jpg</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Done in 13.9 secs</code></pre>
+<pre><code>Done in 14.3 secs</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add attributes</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>data.out <span class="ot">&lt;-</span> <span class="fu">Out</span>(outlines, </span>
@@ -632,12 +632,17 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>ms<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="fu">MSHAPES</span>(efa.outlines, <span class="sc">~</span>site, <span class="at">nb.pts =</span> <span class="dv">100</span>)<span class="sc">$</span>shp</span>
 <span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>Carpenter <span class="ot">&lt;-</span> ms<span class="fl">.1</span><span class="sc">$</span>Carpenter</span>
 <span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>PTM <span class="ot">&lt;-</span> ms<span class="fl">.1</span><span class="sc">$</span>PTM</span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="fu">tps_iso</span>(Carpenter, PTM, <span class="at">iso.nb =</span> <span class="dv">1000</span>, <span class="at">grid =</span> <span class="cn">TRUE</span>, <span class="at">legend =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="fu">tps_arr</span>(Carpenter, PTM, <span class="at">arr.nb =</span> <span class="dv">200</span>, <span class="at">grid =</span> <span class="cn">TRUE</span>, <span class="at">legend =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="fu">tps_grid</span>(Carpenter, PTM, <span class="at">grid.size =</span> <span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="fu">tps_iso</span>(Carpenter, PTM, <span class="at">iso.nb =</span> <span class="dv">1000</span>, <span class="at">grid =</span> <span class="cn">TRUE</span>, <span class="at">legend =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="morphology.site_files/figure-html/ms1-1.png" class="img-fluid" style="width:100.0%"></p>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tps_arr</span>(Carpenter, PTM, <span class="at">arr.nb =</span> <span class="dv">200</span>, <span class="at">grid =</span> <span class="cn">TRUE</span>, <span class="at">legend =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="morphology.site_files/figure-html/ms1-2.png" class="img-fluid" style="width:100.0%"></p>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tps_grid</span>(Carpenter, PTM, <span class="at">grid.size =</span> <span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="morphology.site_files/figure-html/ms1-3.png" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
 

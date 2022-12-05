@@ -97,14 +97,12 @@ MANOVA_PW(pca.outlines, 'burial')
 ms.1 <- MSHAPES(efa.outlines, ~burial, nb.pts = 100)$shp
 F2.2072 <- ms.1$F2.2072
 F2.2073 <- ms.1$F2.2073
-par(mfrow=c(2,2))
 tps_iso(F2.2073, F2.2072, iso.nb = 1000, grid = TRUE, legend = FALSE)
 tps_arr(F2.2073, F2.2072, arr.nb = 200, grid = TRUE, legend = FALSE)
 tps_grid(F2.2073, F2.2072, grid.size = 50)
 
 # mean shapes for F2.2073/F8.1091
 F8.1091 <- ms.1$F8.1091
-par(mfrow=c(2,2))
 tps_iso(F2.2073, F8.1091, iso.nb = 1000, grid = TRUE, legend = FALSE)
 tps_arr(F2.2073, F8.1091, arr.nb = 200, grid = TRUE, legend = FALSE)
 tps_grid(F2.2073, F8.1091, grid.size = 50)

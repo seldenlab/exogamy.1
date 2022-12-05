@@ -94,7 +94,6 @@ MANOVA(pca.outlines, 'site')
 ms.1 <- MSHAPES(efa.outlines, ~site, nb.pts = 100)$shp
 Carpenter <- ms.1$Carpenter
 PTM <- ms.1$PTM
-par(mfrow=c(2,2))
 tps_iso(Carpenter, PTM, iso.nb = 1000, grid = TRUE, legend = FALSE)
 tps_arr(Carpenter, PTM, arr.nb = 200, grid = TRUE, legend = FALSE)
 tps_grid(Carpenter, PTM, grid.size = 50)
